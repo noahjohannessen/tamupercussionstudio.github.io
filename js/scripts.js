@@ -89,7 +89,9 @@ if (window.location.href == 'https://www.tamupercussionstudio.com/' || window.lo
 
 function scrollCheck() {
 	var y = Math.ceil(document.getElementById('parallaxWrapper').scrollTop);
-	var about = document.getElementById('about').offsetTop;
+  var about = document.getElementById('about').offsetTop;
+  var showNavAt = window.innerHeight * 0.8; // Example threshold
+
 	var join = document.getElementById('join').offsetTop;
 	var r3 = document.getElementById('row3').offsetTop + about;
 	//Stick overlay opacity
@@ -127,4 +129,13 @@ function scrollCheck() {
 	else {
 		document.getElementById('tickets').style.transform = 'translate(100%, -20%) rotate(-5deg)';
 	}
+
+	
+  if (y >= showNavAt) {
+    document.getElementById('navHeader').style.visibility = 'visible';
+    document.getElementById('navHeader').style.opacity = '1';
+  } else {
+    document.getElementById('navHeader').style.visibility = 'hidden';
+    document.getElementById('navHeader').style.opacity = '0';
+  }
 }
