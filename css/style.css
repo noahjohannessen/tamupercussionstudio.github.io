@@ -700,6 +700,7 @@ h1 {
 	}
 }
 
+
 /* Contact Page */
 
 #contactTitle {
@@ -711,6 +712,7 @@ h1 {
 	flex-direction: column;
 	padding-top: 5vh;
 	padding-bottom: 2vh;
+	width: 100%;
 }
 
 #fifthSection.section.parallax.bg2::after {
@@ -722,9 +724,12 @@ h1 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding: 2% 10%;
 }
 
+
 .contactCard {
+	box-sizing: content-box;
 	background-color: white;
 	border-radius: 5%;
 	padding: 20px;
